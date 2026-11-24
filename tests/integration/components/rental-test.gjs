@@ -7,7 +7,20 @@ module('Integration | Component | rental', function (hooks) {
   setupRenderingTest(hooks);
 
   test('renders the rental details and image', async function (assert) {
-    await render(<template><Rental /></template>);
+    const rental = {
+      title: 'Grand Old Mansion',
+      owner: 'Veruca Salt',
+      city: 'San Francisco',
+      location: {
+        lat: 37.7749,
+        lng: -122.4194,
+      },
+      type: 'Standalone',
+      bedrooms: 15,
+      image: '/assets/images/teaching-tomster.png',
+    };
+
+    await render(<template><Rental @rental={{rental}} /></template>);
 
     assert.dom('article').hasClass('rental');
     assert.dom('.rental h3').hasText('Grand Old Mansion');
