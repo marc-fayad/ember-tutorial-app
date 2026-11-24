@@ -1,8 +1,8 @@
 import { LinkTo } from '@ember/routing';
+import Jumbo from 'super-rentals/components/jumbo';
 
 <template>
   <div class="jumbo">
-    <div class="right tomster"></div>
     <h2>About Super Rentals</h2>
     <p>
       Super Rentals is a sample property rental website built to explore Ember.

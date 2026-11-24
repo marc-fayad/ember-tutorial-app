@@ -1,8 +1,8 @@
 import { LinkTo } from '@ember/routing';
+import Jumbo from 'super-rentals/components/jumbo';
 
 <template>
   <div class="jumbo">
-    <div class="right tomster"></div>
     <h2>Contact Us</h2>
     <p>Get in touch for help choosing a destination or planning your stay.</p>
     <address>
